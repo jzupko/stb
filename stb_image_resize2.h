@@ -7193,6 +7193,7 @@ static stbir__info * stbir__alloc_internal_mem_and_build_samplers( stbir__sample
       STBIR__NEXT_PTR( info->split_info[i].decode_buffer, decode_buffer_size, float );
 
 #ifdef STBIR__SEPARATE_ALLOCATIONS
+      (void)ring_buffer_size;
 
       #ifdef STBIR_SIMD8
       if ( ( info ) && ( effective_channels == 3 ) )
